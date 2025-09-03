@@ -1,0 +1,121 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+main{
+   height: 100%;
+   width: 100%;
+   padding: 1.5rem;
+   display: flex;
+   gap: 1rem;
+}
+
+main > .left, 
+main > .right {
+  height: 100%;
+  flex: 1;
+  border-radius: 0.7rem;
+}
+
+main > .left{
+  background-color: black;
+  position: relative;
+}
+
+.left .code {
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  color: white;
+}
+
+.left .code pre {
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow: auto;
+  height: calc(100% - 60px);
+}
+
+.left .code code {
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+main .left .review{
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+main .left .review .review-btn{
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+main .left .review .review-btn:hover{
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+main .left .review .review-btn:active{
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+main > .right{
+  background-color: #0f0f0f;
+  padding: 1rem;
+  overflow: auto;
+  color: white;
+  overflow-wrap: anywhere;
+}
+
+/* Ensure Markdown content and code blocks wrap and stay within the panel */
+.right p,
+.right li {
+  margin-bottom: 0.75rem;
+}
+
+.right pre {
+  background: #1e1e1e;
+  color: #ffffff;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  overflow: auto;
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.right code {
+  background: rgba(0,0,0,0.3);
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
